@@ -18,7 +18,7 @@ public class PlayerJoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        if (_plugin.config.enabled) {
+        if (_plugin.config.enabled && _plugin.database.getPlayerEnabled(event.getPlayer())) {
             setPlayerResourcePack(event.getPlayer());
         }
     }

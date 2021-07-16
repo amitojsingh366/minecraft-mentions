@@ -27,8 +27,9 @@ public class PlayerChatListener implements Listener {
             while (matcher.find()) {
                 String username = matcher.group(1);
                 Player player = Bukkit.getPlayer(username);
+                boolean enabled = _plugin.database.getPlayerEnabled(event.getPlayer());
 
-                if (player != null && !event.getPlayer().getName().equals(username)) {
+                if (player != null && !event.getPlayer().getName().equals(username) && enabled) {
                     player.playSound(player.getLocation(), "custom.mention", 1, 1);
                 }
             }

@@ -13,6 +13,9 @@ commands:
     permission: minecraftMentions.default
     permission-message: You do not have permission to use this command.
     usage: "Usage: /<command> [on|off|enable|disable|delay]"
+  mentions:
+    description: Enable/Disable mentions for that player
+    usage: "Usage: /<command> [on|off|enable|disable]"
 permissions:
   minecraftMentions.default:
     description: Gives permission to change Minecraft Mentions settings

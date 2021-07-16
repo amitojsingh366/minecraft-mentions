@@ -1,5 +1,6 @@
 package net.amitoj.minecraftmentions.util;
 
+import net.amitoj.minecraftmentions.MinecraftMentions;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -27,9 +28,9 @@ public class Updater {
     public String downloadUrl;
     public String newFileName;
 
-    public Updater(JavaPlugin plugin, Config config) {
+    public Updater(MinecraftMentions plugin) {
         this._plugin = plugin;
-        this._config = config;
+        this._config = plugin.config;
         checkForUpdates();
         deleteOldFiles();
         if (_config.shouldAutoUpdate && updateAvailable) {
