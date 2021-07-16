@@ -24,7 +24,7 @@ public class Config {
 
     public Config(JavaPlugin plugin) {
         this.pluginPath = plugin.getDataFolder().getPath();
-        this.configPath = pluginPath + "./config.json";
+        this.configPath = pluginPath + "\\config.json";
         setDefaults();
         checkConfigPath();
         checkConfigUpdates();
