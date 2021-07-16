@@ -35,9 +35,12 @@ public class CommandMinecarftMentions implements CommandExecutor {
                 try {
                     Long newDelay = Long.parseLong(args[1]);
                     _plugin.config.setResourcePackPromptDelay(newDelay);
+                    sender.sendMessage("Set prompt delay to "+ newDelay);
                 } catch (NumberFormatException e) {
+                    sender.sendMessage("Error setting delay");
                     e.printStackTrace();
                 }
+                return true;
             default:
                 return false;
         }
