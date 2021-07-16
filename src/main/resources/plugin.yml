@@ -1,0 +1,8 @@
+name: MinecraftMentions
+version: ${project.version}
+main: net.amitoj.minecraftmentions.MinecraftMentions
+api-version: 1.16
+prefix: MinecraftMentions
+authors: [ amitojsingh366 ]
+description: A simple spigot plugin to allow mentioning players on your minecraft server
+website: https://amitoj.net
