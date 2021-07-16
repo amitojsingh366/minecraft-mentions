@@ -21,7 +21,7 @@ public class Config {
     public boolean shouldAutoUpdate;
     public String resourcePackUrl;
     public String resourcePackHash;
-    public int resourcePackPromptDelay;
+    public Long resourcePackPromptDelay;
 
     public Config(JavaPlugin plugin) {
         this.pluginPath = plugin.getDataFolder().getPath();
@@ -52,7 +52,7 @@ public class Config {
         setShouldAutoUpdate((Boolean) config.get("should_auto_update"));
         setResourcePackUrl((String) config.get("resource_pack_url"));
         setResourcePackHash((String) config.get("resource_pack_hash"));
-        setResourcePackPromptDelay((Integer) config.get("resource_pack_prompt_delay"));
+        setResourcePackPromptDelay((Long) config.get("resource_pack_prompt_delay"));
     }
 
     private void checkConfigUpdates() {
@@ -155,7 +155,7 @@ public class Config {
         setConfig();
     }
 
-    public void setResourcePackPromptDelay(int resourcePackPromptDelay) {
+    public void setResourcePackPromptDelay(Long resourcePackPromptDelay) {
         this.resourcePackPromptDelay = resourcePackPromptDelay;
         setConfig();
     }

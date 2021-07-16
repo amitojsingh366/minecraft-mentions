@@ -33,7 +33,7 @@ public class CommandMinecarftMentions implements CommandExecutor {
                 return true;
             case "delay":
                 try {
-                    int newDelay = Integer.parseInt(args[1]);
+                    Long newDelay = Long.parseLong(args[1]);
                     _plugin.config.setResourcePackPromptDelay(newDelay);
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
