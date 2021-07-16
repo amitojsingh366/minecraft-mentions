@@ -21,6 +21,7 @@ public class Config {
     public boolean shouldAutoUpdate;
     public String resourcePackUrl;
     public String resourcePackHash;
+    public int resourcePackPromptDelay;
 
     public Config(JavaPlugin plugin) {
         this.pluginPath = plugin.getDataFolder().getPath();
@@ -51,6 +52,7 @@ public class Config {
         setShouldAutoUpdate((Boolean) config.get("should_auto_update"));
         setResourcePackUrl((String) config.get("resource_pack_url"));
         setResourcePackHash((String) config.get("resource_pack_hash"));
+        setResourcePackPromptDelay((Integer) config.get("resource_pack_prompt_delay"));
     }
 
     private void checkConfigUpdates() {
@@ -69,7 +71,6 @@ public class Config {
             e.printStackTrace();
         }
 
-        System.out.println(0);
         for (Object o : defaultConfig.keySet()) {
             String key = (String) o;
             if (config.get(key) == null) {
@@ -93,9 +94,10 @@ public class Config {
     private void setConfig() {
         JSONObject config = new JSONObject();
         config.put("enabled", enabled);
-        config.put("should_auto_update",shouldAutoUpdate);
+        config.put("should_auto_update", shouldAutoUpdate);
         config.put("resource_pack_url", resourcePackUrl);
         config.put("resource_pack_hash", resourcePackHash);
+        config.put("resource_pack_prompt_delay", resourcePackPromptDelay);
 
         File file = new File(configPath);
         if (file.delete()) {
@@ -114,6 +116,7 @@ public class Config {
         defaultConfig.put("should_auto_update", true);
         defaultConfig.put("resource_pack_url", "https://cdn.amitoj.net/mc.amitoj.net/resourcepacks/mention_sound.zip");
         defaultConfig.put("resource_pack_hash", "0439A6AABDD6D3AC3173C150E464FBE8");
+        defaultConfig.put("resource_pack_prompt_delay", 1);
     }
 
     private void checkConfigPath() {
@@ -149,6 +152,11 @@ public class Config {
 
     public void setResourcePackHash(String resourcePackHash) {
         this.resourcePackHash = resourcePackHash;
+        setConfig();
+    }
+
+    public void setResourcePackPromptDelay(int resourcePackPromptDelay) {
+        this.resourcePackPromptDelay = resourcePackPromptDelay;
         setConfig();
     }
 }

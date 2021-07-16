@@ -1,5 +1,6 @@
 package net.amitoj.minecraftmentions;
 
+import net.amitoj.minecraftmentions.commands.CommandMinecarftMentions;
 import net.amitoj.minecraftmentions.listeners.PlayerChatListener;
 import net.amitoj.minecraftmentions.listeners.PlayerJoinListener;
 import net.amitoj.minecraftmentions.listeners.PlayerResourcePackStatusListener;
@@ -23,6 +24,7 @@ public final class MinecraftMentions extends JavaPlugin {
         getServer().getPluginManager().registerEvents(playerChatListener, this);
         getServer().getPluginManager().registerEvents(playerResourcePackStatusListener, this);
 
+        this.getCommand("minecraftmentions").setExecutor(new CommandMinecarftMentions(this));
     }
 
     @Override

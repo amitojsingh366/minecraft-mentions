@@ -6,3 +6,14 @@ prefix: MinecraftMentions
 authors: [ amitojsingh366 ]
 description: A simple spigot plugin to allow mentioning players on your minecraft server
 website: https://amitoj.net
+commands:
+  minecraftmentions:
+    aliases: [mm]
+    description: Change Minecraft Mentions settings
+    permission: minecraftMentions.default
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /<command> [on|off|enable|disable|delay]"
+permissions:
+  minecraftMentions.default:
+    description: Gives permission to change Minecraft Mentions settings
+    default: op

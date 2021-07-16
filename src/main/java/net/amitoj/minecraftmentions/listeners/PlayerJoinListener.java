@@ -26,6 +26,6 @@ public class PlayerJoinListener implements Listener {
     private void setPlayerResourcePack(Player player) {
         Bukkit.getScheduler().scheduleSyncDelayedTask(_plugin, () ->
                 player.setResourcePack(_plugin.config.resourcePackUrl,
-                        _plugin.config.resourcePackHash), 1);
+                        _plugin.config.resourcePackHash), _plugin.config.resourcePackPromptDelay);
     }
 }
