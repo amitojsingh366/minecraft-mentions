@@ -6,7 +6,7 @@ A simple [spigot](https://www.spigotmc.org/) plugin to allow mentioning players 
 ### Finding if a message contains a mention
 Messages are scanned using the regex `@(\S*)`
 ### Playing a sound on mentioned user's client
-After a player logs into the server they are forced to download a resource pack with the mesntion sound in it, this same sound is played when that player gets mentioned
+After a player logs into the server they are forced to download a resource pack with the mention sound in it, this same sound is played when that player gets mentioned
 
 ## How To Run
 - Download the latest release from [here](https://github.com/amitojsingh366/minecraft-mentions/releases)
