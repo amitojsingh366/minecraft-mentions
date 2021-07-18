@@ -14,6 +14,12 @@ After a player logs into the server they are forced to download a resource pack 
 - Run the server once to generate the config files
 - Configure the plugin using the generated config file *(Located at `.plugins/MinecraftMentions/config.json`)*
 
+## Commands
+- `/minecraftmentions [on|off|enable|disable|delay]` allows you to turn Minecraft Mentions
+  on/off server wide and set the resource pack prompt delay *(aliases: `/mm`)*
+  
+- `/mentions [on|off|enable|disable]` allows an indivisual player to turn on/off mentions for themselves
+
 ## Credits
 The mention sound effect was taken from the [DogeHouse](https://github.com/benawad/dogehouse/blob/staging/kibbeh/public/sound-effects/roomChatMention.wav) Repo and was originally made by [@MrDogeBro](https://github.com/MrDogeBro)
 
